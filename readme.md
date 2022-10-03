@@ -25,4 +25,3 @@ This is all available on a website we created using HTML, CSS, and Javascript an
 ## Reflection
 
 What was inspired by a weekend of sifting through overly-technical research papers and realizing that the current system is flawed, this tool is meant to save precious time and make the research process more efficient.
-asd
