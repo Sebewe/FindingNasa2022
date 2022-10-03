@@ -2,7 +2,7 @@
 
 **_The implementation of the ML models can be found in myapp/day_cntrl.py_**
 
-### Project Summary
+## Project Summary
 
 Using both extractive and abstractive NLP text summarization, one is able to decompose what could be a 100-page research paper into a single sentence. Provided with keywords that are relevant to your article, subject matter, and field. you can sort through multiple research papers in the time that it would take to go through only one. We set out to use data and artificial intelligence to save the user time, and make the research process more efficient and user-friendly. This is important as it opens up the possibilities of what a researcher can do. Regardless of a user's field of proficiency or expertise, they're able to branch out and widen the scope of their research.
 
