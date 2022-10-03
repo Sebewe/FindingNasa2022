@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	{% load static %}
+	<link rel="stylesheet" href="{% static 'mystyle.css' %}">
+	<link rel="checkscreen" href="checkscreen.html">
+        <meta charset="utf-8">
+        <title>Find</title>
+    </head>
+	<style>
+	h1 {position: absolute;
+    top: 70%; left: 5%; font-size: 16px;}
+	</style>
+	<body>
+	<h1>
+        <!-- List of uploaded documents -->
+	Summarized Papers: Resolvability of Objects from the Standpoint of Statistical Parameter Estimation
+	<form actiom="checkscreen.html">
+		<p>Summary Researchers at the University of California Los Angeles and the Massachusetts Institute of Technology MIT have developed a new way to measure the length of light in space.</p>
+
+		<p>
+Keywords and Relevance
+Keyword: aperture; Calculated Relevance: 51.0% 
+Keyword: frequency; Calculated Relevance: 39.54% 
+Keyword: frequencies; Calculated Relevance: 39.48% 
+Keyword: instrument; Calculated Relevance: 38.59% 
+Keyword: coherence; Calculated Relevance: 26.86% 
+	   </p>
+	</form>
+	</h1>
+	</body>
+        <!-- Upload form. Note enctype attribute! -->
+        <form action="{% url "my-view" %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <p>{{ form.non_field_errors }}</p>
+	 <div>
+		 {% load static %}
+		 <img src="{% static 'find_logo.png' %}" class="centerimage">
+	</div>
+	 <label style="padding-bottom: 1%;" class = "centerinput file-upload rcorners1">
+		 <p>{{ form.docfile.label_tag }} {{ form.docfile.help_text }}</p>
+	 </label>
+            <p>
+                {{ form.docfile.errors }}
+                {{ form.docfile }}
+            </p>
+	    <details>
+  		<summary class="centersubmit" style="top:65%; left: 53%; font-size: 20px">How to</summary>
+  		<p class="centersubmit" style="top:67%; left: 53%; font-size: 16px; width: 30%;">To get started, upload a PDF and then click "Find". The algorithm will begin processing your PDF, and you can check if your file summary is ready by scrolling down to see the finished list of files.</p>
+	    </details>
+
+
+	    <body>
+       	    <button type="submit" id="s" value="Upload" class="button button1 centersubmit" >Find</button>        
+            </body>
+        </form>
+    </body>
+</html>

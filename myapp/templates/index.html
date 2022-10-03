@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'mystyle.css' %}">
+    <link rel="checkscreen" href="checkscreen.html">
+</head>
+    <div>
+        {% load static %}
+        <img src="{% static 'find_logo.png' %}" class = "centerimage">
+    </div>
+<form action="checkscreen.html">
+
+    <label class = "centerinput file-upload rcorners1">
+        <input type="file" name="filename" id="input" accept=".pdf" onchange="set()"required/>
+        PDF Upload
+    </label>
+    <body>
+        <button type="submit" id="s" value="Upload" class="button button1 centersubmit">Find</button>        
+    </body>
+<p class = "centersubmit" style= "top: 55%; left: 52.5%">FILE CODE:</p>
+<b id="randomNumber" class = "centersubmit" style="top: 60%; left: 54%; color: rgb(255, 0, 0);"></b>
+<!-- find a way to store the file next to the -->
+<script>
+function set() {
+   var getInput = Math.floor(Math.random() * 1000000);
+   localStorage.setItem("storageName",getInput);
+   document.getElementById("randomNumber").innerHTML = getInput
+}
+import { exec } from 'child_process';
+function saveFile() {
+    var x = document.getElementById("inputfile").value;
+    document.getElementById("filepathing").innerHTML = x;
+}
+</script>
+
+</form>
+
+</html>
